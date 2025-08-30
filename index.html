@@ -17,22 +17,107 @@
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Donate</a></li>
+                    <li><a href="" class="donate-btn" target="_blank">Donate</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     <div id="progressBar"></div>
     <div class="text-box">
-        <h1>Empowering Queens <br> One Step at a Time</h1>
-        <p>Join us in our mission to uplift, support, and <br> celebrate the strength of women in our community.</p>
+        <h1>Raising a Generation of Confident, <br> Resilient Queens.</h1>
+        <p> "There is no limit to what we, as women, can accomplish." <br>
+ - Michelle Obama</p>
         <a href="" class="hero-btn">Get Involved</a>
     </div>
     </section>
+<!-- ----------- About ----------- -->
+    <section class="about">
+    <div class="container">
+        <div class="story-image">
+        <img src="images/IMG_7540.jpg" alt="Raising Queens Foundation">
+        </div>
+        <div class="story-content">
+        <h2>About Us</h2>
+        <p>Raising Queens Foundation is a non-profit organisation that empowers
+ underprivileged women and  youth by developing strategies for their
+ educational and personal development. The organisation encourages
+ woman and the youth to view higher education as a desirable and
+ important tool for their empowerment. The primary focus of the
+ organisation is advancing gender equality and basic human rights
+ including providing feminine hygiene and reproductive health essentials,
+ facilitating educational workshops, and mentoring the youth.
+ The organisation is founded by a young woman and is led by young
+ individuals who empower other young individuals
+        </p>
+        <div class="stats">
+            <div class="stat">
+            <span class="number">100+</span>
+            <span class="label">Youths impacted</span>
+            </div>
+            <div class="stat">
+            <span class="number">1000s</span>
+            <span class="label">Pads Donated</span>
+            </div>
+            <div class="stat">
+            <span class="number">12</span>
+            <span class="label">Partnerships Formed</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+ 
+<!-- ------------- footer ----------- -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="images/logo-inverted.png" alt="Raising Queens Logo">
+      <p>Empowering women and creating supportive communities across our region.</p>
+      <div class="social-links">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-tiktok"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Donate</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> 30 Elizabeth Avenue, Rivonia, Sandton, South Africa</li>
+        <li><i class="fa fa-phone"></i> +27 (0) 81 40 6516</li>
+        <li><i class="fa fa-envelope"></i> info@raisingqueens.org.za</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Raising Queens Foundation</p>
+    <div class="footer-policy">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
 
 
-
-<!-- -----JavaScript for Toggle Menu------ -->
+<!-- -----JavaScript ------ -->
 <script>
+    //toggle menu
     var navLinks = document.getElementById("navLinks");
     function showMenu(){
         navLinks.style.right = "0";
