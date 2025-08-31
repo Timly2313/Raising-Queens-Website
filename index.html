@@ -198,6 +198,25 @@
 
   document.getElementById('progressBar').style.width = scrollPercent + '%';
 });
+
+    //About us fade in effect
+ document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".story-image, .story-content");
+
+  function handleScroll() {
+    const triggerPoint = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+      if (el.getBoundingClientRect().top < triggerPoint) {
+        el.classList.add("animate");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+});
+
     //contiunous sponsor scroll
 const track = document.querySelector('.carousel-track');
 let speed = 0.5;

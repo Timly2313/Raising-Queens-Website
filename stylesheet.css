@@ -189,6 +189,27 @@ nav .fa{
   color: #333;
 }
 
+/* Fade in animation  */
+.story-image,
+.story-content {
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.story-image {
+  transform: translateX(-150px);
+}
+.story-content {
+  transform: translateX(150px);
+}
+
+.story-image.animate,
+.story-content.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .stats {
   display: flex;
   gap: 40px;
