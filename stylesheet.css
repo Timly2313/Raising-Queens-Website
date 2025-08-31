@@ -262,7 +262,7 @@ nav .fa{
 .partners-section {
   padding: 60px 6%;
   text-align: center;
-  background: #f9f5f2;
+  background: white;
 }
 
 .partners-header h2 {
@@ -367,6 +367,10 @@ nav .fa{
 .contact-form .container {
   width: 100%;
   max-width: 550px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .contact-form h2 {
