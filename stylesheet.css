@@ -151,12 +151,12 @@ nav .fa{
 }
 
 /* ---------------- origin story ------------- */
-.about {
+.story {
   padding: 60px 6%;
   background-color: #fff;
 }
 
-.about .container {
+.story .container {
   display: flex;
   align-items: center;
   gap: 40px;
