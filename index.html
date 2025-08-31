@@ -134,6 +134,68 @@
     <a href="" class="partner-link">Become a Partner</a>
   </div>
 </section>
+<!-- -------------- contact us ------------- -->
+<section class="contact-form" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Please fill out the form below.</p>
+
+    <form id="contactForm" method="POST" 
+          <!-- action="BACKEND_SCRIPT_OR_EMAIL_SERVICE_URL" -->
+  
+      <div class="form-row">
+      <div class="form-group">
+        <label for="name">Full Name <span>*</span></label>
+        <input type="text" id="name" name="name" required>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required>
+        <small class="error-message"></small>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone (Optional)</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+ ]{7,15}" placeholder="+27 71 234 5678">
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="inquiry">Inquiry Type <span>*</span></label>
+        <select id="inquiry" name="inquiry" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="volunteer">Volunteer</option>
+          <option value="donate">Donate Query</option>
+          <option value="partner">Partner</option>
+          <option value="sponsorship">Sponsorship</option>
+          <option value="media">Media</option>
+          <option value="support">Support/Feedback</option>
+          <option value="general">General Inquiry</option>
+          <option value="event">Event Info</option>
+        </select>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject <span>*</span></label>
+        <input type="text" id="subject" name="subject" required>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <small class="error-message"></small>
+      </div>
+
+      <button type="submit">Send Message</button>
+      <p id="formSuccess" class="success-message"></p>
+    </form>
+  </div>
+</section>
 
 <!-- ------------- footer ----------- -->
 <footer>
@@ -235,6 +297,74 @@ function animate() {
 
 animate();
 
+  //Contact validation 
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // stop form for now (until backend is ready)
+
+    let isValid = true;
+    let successMsg = document.getElementById("formSuccess");
+    successMsg.textContent = "";
+
+    // reset errors
+    document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
+    document.querySelectorAll("input, select, textarea").forEach(el => el.classList.remove("error"));
+
+    // validate name
+    let name = document.getElementById("name");
+    if (name.value.trim().length < 2) {
+      setError(name, "Please enter your full name.");
+      isValid = false;
+    }
+
+    // validate email
+    let email = document.getElementById("email");
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+    if (!emailPattern.test(email.value)) {
+      setError(email, "Please enter a valid email address.");
+      isValid = false;
+    }
+
+    // validate phone
+    let phone = document.getElementById("phone");
+    if (phone.value && !/^[0-9+ ]{7,15}$/.test(phone.value)) {
+      setError(phone, "Please enter a valid phone number.");
+      isValid = false;
+    }
+
+    // validate inquiry type
+    let inquiry = document.getElementById("inquiry");
+    if (!inquiry.value) {
+      setError(inquiry, "Please select an inquiry type.");
+      isValid = false;
+    }
+
+    // validate subject
+    let subject = document.getElementById("subject");
+    if (subject.value.trim().length < 3) {
+      setError(subject, "Subject must be at least 3 characters.");
+      isValid = false;
+    }
+
+    // validate message
+    let message = document.getElementById("message");
+    if (message.value.trim().length < 10) {
+      setError(message, "Message must be at least 10 characters.");
+      isValid = false;
+    }
+
+    if (isValid) {
+      successMsg.textContent = "Form submitted successfully! (Backend integration needed here)";
+      // TODO: Replace with actual form submission (AJAX or backend endpoint)
+      document.getElementById("contactForm").reset();
+    }
+  });
+
+  function setError(element, message) {
+    let errorEl = element.parentElement.querySelector(".error-message");
+    errorEl.textContent = message;
+    errorEl.style.display = "block";
+    element.classList.add("error");
+  }
 </script>
 </body>
 </html>
