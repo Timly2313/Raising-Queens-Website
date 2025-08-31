@@ -41,16 +41,16 @@
         </div>
         <div class="story-content">
         <h2>About Us</h2>
-        <p>Raising Queens Foundation is a non-profit organisation that empowers
- underprivileged women and  youth by developing strategies for their
- educational and personal development. The organisation encourages
- woman and the youth to view higher education as a desirable and
- important tool for their empowerment. The primary focus of the
- organisation is advancing gender equality and basic human rights
- including providing feminine hygiene and reproductive health essentials,
- facilitating educational workshops, and mentoring the youth.
- The organisation is founded by a young woman and is led by young
- individuals who empower other young individuals
+        <p>Raising Queens Foundation is a non-profit organisation that empowers 
+            underprivileged women and  youth by developing strategies for their 
+            educational and personal development. The organisation encourages 
+            woman and the youth to view higher education as a desirable and 
+            important tool for their empowerment. The primary focus of the 
+            organisation is advancing gender equality and basic human rights 
+            including providing feminine hygiene and reproductive health essentials, 
+            facilitating educational workshops, and mentoring the youth.<br><br>
+            The organisation is founded by a young woman and is led by young 
+            individuals who empower other young individuals.
         </p>
         <div class="stats">
             <div class="stat">
@@ -69,13 +69,75 @@
         </div>
     </div>
     </section>
- 
+
+<!-- ------------- partners --------------- -->
+ <section class="partners-section">
+  <div class="partners-header">
+    <h2>Our Partners</h2>
+    <p>We collaborate with amazing organizations to empower women</p>
+  </div>
+
+  <div class="partners-carousel">
+    <div class="carousel-track">
+      <div class="partner">
+        <img src="images/ROH logo.png" alt="Rays of Hope">
+        <p>Rays of Hope</p>
+      </div>
+      <div class="partner">
+        <img src="images/For-Good.jpg" alt="For Good">
+        <p>For Good</p>
+      </div>
+      <div class="partner">
+        <img src="images/frida hartley shelter.png" alt="FHS">
+        <p>Frida Hartley Shelter</p>
+      </div>
+      <div class="partner">
+        <img src="images/momentum.png" alt="Momentum">
+        <p>Momentum</p>
+      </div>
+      <div class="partner">
+        <img src="images/sisonke_wellness_foundation_logo.jpeg" alt="Sisonke">
+        <p>Sisonke Foundation</p>
+      </div>
+      <div class="partner">
+        <img src="images/Virgin-Active_Logo.png" alt="Virgin Active">
+        <p>Virgin Active</p>
+      </div>
+      <div class="partner">
+        <img src="images/leap.png" alt="Leap">
+        <p>Leap</p>
+      </div>
+      <div class="partner">
+        <img src="images/partner1.png" alt="Shibe Academy">
+        <p>Shibe's Creative Kids</p>
+      </div>
+      <div class="partner">
+        <img src="images/partner1.png" alt="Panda">
+        <p>Panda</p>
+      </div>
+      <div class="partner">
+        <img src="images/partner1.png" alt="WMC">
+        <p>WMC International</p>
+      </div>
+      <div class="partner">
+        <img src="images/partner1.png" alt="VSC">
+        <p>VSC</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partners-cta">
+    <p>Interested in becoming a partner?</p>
+    <a href="" class="partner-link">Become a Partner</a>
+  </div>
+</section>
+
 <!-- ------------- footer ----------- -->
 <footer>
   <div class="footer-top">
     <div class="footer-logo">
       <img src="images/logo-inverted.png" alt="Raising Queens Logo">
-      <p>Empowering women and creating supportive communities across our region.</p>
+      <p>Empowering the youth and creating supportive communities across our region.</p>
       <div class="social-links">
         <a href=""><i class="fab fa-facebook-f"></i></a>
         <a href=""><i class="fab fa-tiktok"></i></a>
@@ -108,12 +170,11 @@
   <div class="footer-bottom">
     <p>&copy; 2025 Raising Queens Foundation</p>
     <div class="footer-policy">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+      <a href="">Privacy Policy</a>
+      <a href="">Terms of Service</a>
     </div>
   </div>
 </footer>
-
 
 <!-- -----JavaScript ------ -->
 <script>
@@ -134,6 +195,24 @@
 
   document.getElementById('progressBar').style.width = scrollPercent + '%';
 });
+    //contiunous sponsor scroll
+const track = document.querySelector('.carousel-track');
+let speed = 0.5;
+let position = 0;
+
+track.innerHTML += track.innerHTML;
+
+function animate() {
+  position -= speed;
+  if (position <= -track.scrollWidth / 2) {
+    position = 0;
+  }
+  track.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
+
 </script>
 </body>
 </html>
