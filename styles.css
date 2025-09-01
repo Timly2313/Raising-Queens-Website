@@ -297,7 +297,7 @@ nav .fa{
 .partners-section {
   padding: 60px 6%;
   text-align: center;
-  background: #f9f5f2;
+  background: white;
 }
 
 .partners-header h2 {
@@ -356,7 +356,9 @@ nav .fa{
 }
 
 .partners-cta {
-  margin-top: 40px;
+  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 10;
 }
 
 .partners-cta p {
@@ -391,8 +393,112 @@ nav .fa{
     scroll-snap-align: start;
   }
 }
+/* ----------- contact us form ---------- */
+.contact-form {
+  padding: 40px 6%;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
 
+.contact-form .container {
+  width: 100%;
+  max-width: 550px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
+.contact-form h2 {
+  color: #c6a291;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-form p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1 1 calc(50% - 5px);
+  min-width: 200px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group span {
+  color: red;
+}
+
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input.error, select.error, textarea.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
+button[type="submit"] {
+  background: #c6a291;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 15px auto 0;
+}
+
+button[type="submit"]:hover {
+  background: #a87f71;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .form-row .form-group {
+    flex: 1 1 100%; 
+  }
+}
+/* ------- footer-------- */
   .footer {
     background-color: #333333; 
     color: #fff;
