@@ -64,17 +64,20 @@
         <img src="images/IMG_7540.jpg" alt="Raising Queens Foundation">
         </div>
         <div class="story-content">
-        <h2>About Us</h2>
-        <p>Raising Queens Foundation is a non-profit organisation that empowers 
-            underprivileged women and  youth by developing strategies for their 
-            educational and personal development. The organisation encourages 
-            woman and the youth to view higher education as a desirable and 
-            important tool for their empowerment. The primary focus of the 
-            organisation is advancing gender equality and basic human rights 
-            including providing feminine hygiene and reproductive health essentials, 
-            facilitating educational workshops, and mentoring the youth.<br><br>
-            The organisation is founded by a young woman and is led by young 
-            individuals who empower other young individuals.
+        <h2>Our Story</h2>
+        <p>Raising Queens Foundation was born out of both lived experience and a deep awareness of the challenges facing women and youth 
+          in South Africa. Our country continues to grapple with staggering gender inequalities, high levels of gender-based violence (GBV), 
+          and some of the highest youth unemployment rates in the world. For many girls and young women, these realities mean limited 
+          opportunities, cycles of poverty, and a lack of safe spaces where they can dream, grow, and thrive.<br><br>
+          For me, this mission is deeply personal. I come from a GBV background and was raised by a single mother who embodied both woman 
+          power and soft strength. Watching her resilience shaped my understanding of what true empowerment looks like — quiet courage, 
+          dignity, and the will to rise above circumstances. Yet I also knew how isolating it could feel to navigate these struggles without 
+          guidance.<br><br>
+          Raising Queens Foundation was my way of becoming the “older sister” I never had — someone who could walk alongside young girls 
+          and women, reminding them of their worth and equipping them with the tools to succeed. What started as a dream has grown into a 
+          movement: creating safe spaces, building digital and leadership skills, and breaking cycles of inequality.<br><br> 
+          Our vision is simple but urgent — to raise a generation of Queens who are resilient, confident, and unstoppable, 
+          rewriting the narrative for women and youth in South Africa and beyond.
         </p>
         <div class="stats">
             <div class="stat">
@@ -98,7 +101,7 @@
  <section class="partners-section">
   <div class="partners-header">
     <h2>Our Partners</h2>
-    <p>We collaborate with amazing organizations to empower women</p>
+    <p>We collaborate with amazing organizations to empower the youth.</p>
   </div>
 
   <div class="partners-carousel">
@@ -132,25 +135,92 @@
         <p>Leap</p>
       </div>
       <div class="partner">
-        <img src="images/partner1.png" alt="Shibe Academy">
+        <img src="images/Shibes Creative Kids.jpg" alt="Shibe Academy">
         <p>Shibe's Creative Kids</p>
       </div>
       <div class="partner">
-        <img src="images/partner1.png" alt="Panda">
+        <img src="images/Panda Logo.jpg" alt="Panda">
         <p>Panda</p>
       </div>
       <div class="partner">
-        <img src="images/partner1.png" alt="WMC">
+        <img src="images/WMC Logo.jpg" alt="WMC">
         <p>WMC International</p>
       </div>
       <div class="partner">
-        <img src="images/partner1.png" alt="VSC">
+        <img src="images/VSC Logo.jpg" alt="VSC">
         <p>VSC</p>
       </div>
     </div>
   </div>
  </section>
 
+  <div class="partners-cta">
+    <p>Interested in becoming a partner?</p>
+    <a href="" class="partner-link">Become a Partner</a>
+  </div>
+</section>
+<!-- -------------- contact us ------------- -->
+<section class="contact-form" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Please fill out the form below.</p>
+
+    <form id="contactForm" method="POST" 
+          <!-- action="BACKEND_SCRIPT_OR_EMAIL_SERVICE_URL" -->
+  
+      <div class="form-row">
+      <div class="form-group">
+        <label for="name">Full Name <span>*</span></label>
+        <input type="text" id="name" name="name" required>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required>
+        <small class="error-message"></small>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone (Optional)</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+ ]{7,15}" placeholder="+27 71 234 5678">
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="inquiry">Inquiry Type <span>*</span></label>
+        <select id="inquiry" name="inquiry" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="volunteer">Volunteer</option>
+          <option value="donate">Donate Query</option>
+          <option value="partner">Partner</option>
+          <option value="sponsorship">Sponsorship</option>
+          <option value="media">Media</option>
+          <option value="support">Support/Feedback</option>
+          <option value="general">General Inquiry</option>
+          <option value="event">Event Info</option>
+        </select>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject <span>*</span></label>
+        <input type="text" id="subject" name="subject" required>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <small class="error-message"></small>
+      </div>
+
+      <button type="submit"><i class="fa-regular fa-paper-plane"></i> Send Message</button>
+      <p id="formSuccess" class="success-message"></p>
+    </form>
+  </div>
+</section>
 
 
 
