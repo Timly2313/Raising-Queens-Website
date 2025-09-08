@@ -384,7 +384,7 @@ nav .fa{
 .team-section {
   padding: 60px 20px;
   background: white;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -489,6 +489,140 @@ nav .fa{
 .team-card:hover h4 {
   color: #c6a291;
 }
+/* -------------- Testimonials ----------- */
+.testimonials {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f5eeeb;
+  font-size: 16px;
+}
+
+.testimonials h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #c6a291;
+}
+.testimonials p{
+  font-size: 1.1rem;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.carousel-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%; 
+}
+
+.testimonial-box {
+  flex: 0 0 100%; 
+  box-sizing: border-box;
+  background: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  position: relative;
+  min-height: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  margin: 0; 
+}
+
+/* Giant quote mark */
+.testimonial-box::before {
+  content: "❝";
+  font-size: 250px;
+  color: rgba(198,162,145,0.15);
+  position: absolute;
+  top: -50px;
+  left: -10px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.testimonial-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.testimonial-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto 5px auto;
+  z-index: 1;
+}
+
+.testimonial-box h2 {
+  font-size: 18px;
+  color: #c6a291;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Arrows */
+.prev-testimonial,
+.next-testimonial {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-120%);
+  background: white;
+  color: #a87f71;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.prev-testimonial { left: 3px; }
+.next-testimonial { right: 3px; }
+
+.prev-testimonial:hover,
+.next-testimonial:hover { background: #b8967f; color: white; }
+
+/* Nav dota */
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background-color: #c6a291; /* peachy color for active dot */
+}
+
 /* ----------- partners ----------- */
 .partners-section {
   padding: 60px 6%;
@@ -503,9 +637,11 @@ nav .fa{
 }
 
 .partners-header p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 40px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .partners-carousel {
