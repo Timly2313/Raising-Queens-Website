@@ -6,7 +6,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="styles_donate.css">
+    <script src="https://js.stripe.com/v3/"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -47,33 +48,231 @@
     </div>
     <header>
 
+      <div class="min-h-screen bg-gray-50">
+
+ <section class="header-section">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <div class="header-title">
+        <i class="fas fa-heart"></i>
+        <h1>Make a Difference</h1>
+      </div>
+      <p>
+        Your generosity helps us empower women, strengthen communities, and
+        create lasting change. Every donation, no matter the size, makes a
+        meaningful impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ways to Give -->
+  <section class="ways-section">
+    <div class="section-header">
+      <h2>Ways to Give</h2>
+      <p>
+        Choose how you'd like to support our mission. Each category addresses
+        specific needs in our community.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <!-- Example Card -->
+
+      <div class="donation-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1697665387559-253e7a645e96?auto=format&fit=crop&w=1080" alt="Sanitary Drive" />
+          <div class="icon-badge"><i class="fas fa-box"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>Sanitary Drive</h3>
+          <p>
+            Help us provide essential hygiene products to women in need. Your
+            donation supports dignity and health.
+          </p>
+
+          <h4>What we provide:</h4>
+          <ul class="item-list">
+            <li><i class="fas fa-check-circle"></i> Feminine hygiene products</li>
+            <li><i class="fas fa-check-circle"></i> Personal care items</li>
+            <li><i class="fas fa-check-circle"></i> Healthcare essentials</li>
+            <li><i class="fas fa-check-circle"></i> Comfort care packages</li>
+          </ul>
+
+          <div class="info">
+            <p><strong>Drop-off:</strong> Community Center - 123 Main St</p>
+          </div>
+
+          <button class="btn" id="donate-btn" data-cause="Sanitary Drive">Donate Now <i class="fas fa-arrow-right"></i></button>
+          
+        </div>
+      </div>
+
+    <div class="donation-card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1080" alt="Food Drive" />
+      <div class="icon-badge"><i class="fas fa-utensils"></i></div>
+    </div>
+    <div class="card-body">
+      <h3>Food Drive</h3>
+      <p>
+        Support families in our community with nutritious meals and essential food items.
+      </p>
+
+      <h4>What we provide:</h4>
+      <ul class="item-list">
+        <li><i class="fas fa-check-circle"></i> Non-perishable food items</li>
+        <li><i class="fas fa-check-circle"></i> Fresh produce vouchers</li>
+        <li><i class="fas fa-check-circle"></i> Baby formula and supplies</li>
+        <li><i class="fas fa-check-circle"></i> Meal preparation kits</li>
+      </ul>
+
+      <div class="info">
+        <p><strong>Drop-off:</strong> Local Food Bank - 456 Community Ave</p>
+        <p><strong>Payment:</strong> Cash donations for food purchases accepted</p>
+      </div>
+
+      <button class="btn" data-cause="Food Drive">Donate Now <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Education Fund Card -->
+  <div class="donation-card">
+    <div class="card-image">
+      <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76d?auto=format&fit=crop&w=1080" alt="Education Fund" />
+      <div class="icon-badge"><i class="fas fa-graduation-cap"></i></div>
+    </div>
+    <div class="card-body">
+      <h3>Education Fund</h3>
+      <p>
+        Invest in the future by supporting educational programs, scholarships, and learning resources.
+      </p>
+
+      <h4>What we provide:</h4>
+      <ul class="item-list">
+        <li><i class="fas fa-check-circle"></i> Scholarship program funding</li>
+        <li><i class="fas fa-check-circle"></i> Workshop materials and supplies</li>
+        <li><i class="fas fa-check-circle"></i> Educational technology access</li>
+        <li><i class="fas fa-check-circle"></i> Professional development courses</li>
+      </ul>
+
+      <div class="info">
+        <p><strong>Drop-off:</strong> Online donations preferred</p>
+        <p><strong>Payment:</strong> Secure online payment through our portal</p>
+      </div>
+
+      <button class="btn" data-cause="Education Fund">Donate Now <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- Donation Popup Modal -->
+  <div id="donationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <h2>Donation Registration</h2>
+      <p id="selectedCause"></p>
+
+      <form id="donationForm">
+        <label>Full Name *</label>
+        <input type="text" name="donorName" required>
+
+        <label>Email *</label>
+        <input type="email" name="donorEmail" required>
+
+        <label>Phone</label>
+        <input type="tel" name="donorPhone">
+
+        <label>Donation Type</label>
+        <input type="text" name="donationType" id="donationType" readonly>
+
+        <label>Quantity / Amount *</label>
+        <input type="text" name="quantity" required>
+
+        <label>Preferred Date *</label>
+        <input type="date" name="deliveryDate" required>
+
+        <label>Additional Notes</label>
+        <textarea name="notes"></textarea>
+
+        <label>Would you like to volunteer? *</label>
+        <select name="volunteering" id="volunteering" required>
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+
+        <div id="availabilityField" style="display: none;">
+          <label>Your Availability</label>
+          <input type="text" name="availability" placeholder="e.g. Weekends, weekday evenings">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Donation</button>
+      </form>
+    </div>
+  </div>
 
 
+  <!-- General Donation -->
+  <section class="general-section">
+    <div class="general-box">
+      <div class="general-header">
+        <i class="fas fa-dollar-sign"></i>
+        <h2>General Donation</h2>
+      </div>
+      <p>
+        Support our overall mission with a general donation. These funds help us
+        maintain our programs, support our team, and respond to urgent community
+        needs.
+      </p>
+
+      <div class="custom-input">
+        <label for="custom-amount">Enter an amount:</label>
+        <div class="input-wrapper">
+          <span>R</span>
+          <input type="number" id="custom-amount" placeholder="0" />
+        </div>
+      </div>
+
+      <button id="donate-money-btn" class="btn large">
+        <i class="fas fa-heart"></i> Donate
+      </button>
+      <p class="small-text">
+        Secure payment processing • Tax-deductible • Receipt provided
+      </p>
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="impact-section">
+    <div class="section-header">
+      <h2>Your Impact</h2>
+      <p>
+        See how your contributions are making a real difference in our
+        community.
+      </p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Women Supported</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$25K</div>
+        <div class="stat-label">Funds Raised</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Events Hosted</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Partners</div>
+      </div>
+    </div>
+  </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
       <div class="footer-container">
@@ -145,6 +344,7 @@
 
 
 
-<script src="/script.js"></script>
+<script src="script_donate.js"></script>
+
 </body>
 </html>
