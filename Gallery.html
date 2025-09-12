@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gallery | Raising Queens Foundation</title>
+    <!-- Standard favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Favicon retina/multiple sizes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+
+    <link rel="stylesheet" href="styles_gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,108 +52,137 @@
         <a href="Donate.html">Donate</a>
         <button class="donate-btn">Donate</button>
     </div>
-    <header>
 
 
+   <!-- ------------gallery ------------------ -->
+  <section class="gallery-header">
+  <h2>Event Gallery</h2>
+  <p>Relive the moments that matter. Explore photos from our workshops, events, and community gatherings that celebrate
+    that celebrate the strength and spirit of our youth.
+  </p>
+</section>
 
+<section class="gallery-grid" id="gallery">
+  <!-- Example images -->
+  <img src="gallery/IMG_0209.jpg" alt="Gallery Image 1" />
+  <img src="gallery/IMG_1960.jpg" alt="Gallery Image 2" />
+  <img src="gallery/IMG_2165.jpg" alt="Gallery Image 3" />
+  <img src="gallery/IMG_2224.jpg" alt="Gallery Image 4" />
+  <img src="gallery/IMG_2528.jpg" alt="Gallery Image 5" />
+  <img src="gallery/IMG_2557.jpg" alt="Gallery Image 6" />
+  <img src="gallery/IMG_2660.jpg" alt="Gallery Image 7" />
+  <img src="gallery/IMG_2962.jpg" alt="Gallery Image 8" />
+  <img src="gallery/IMG_3385.jpg" alt="Gallery Image 9" />
+  <img src="gallery/IMG_3587.JPG" alt="Gallery Image 10" />
+  <img src="gallery/IMG_3641.JPG" alt="Gallery Image 11" />
+  <img src="gallery/IMG_3673.jpg" alt="Gallery Image 12" />
+  <img src="gallery/IMG_3696.JPG" alt="Gallery Image 13" />
+  <img src="gallery/IMG_3712.jpg" alt="Gallery Image 14" />
+  <img src="gallery/IMG_3734.jpg" alt="Gallery Image 15" />
+  <img src="gallery/IMG_3879.jpg" alt="Gallery Image 16" />
+  <img src="gallery/IMG_3899.jpg" alt="Gallery Image 17" />
+  <img src="gallery/IMG_3912.jpg" alt="Gallery Image 18" />
+  <img src="gallery/IMG_3938.jpg" alt="Gallery Image 19" />
+  <img src="gallery/IMG_4232.JPG" alt="Gallery Image 20" />
+  <img src="gallery/IMG_4386.JPG" alt="Gallery Image 21" />
+  <img src="gallery/IMG_4627.jpg" alt="Gallery Image 22" />
+  <img src="gallery/IMG_4635.JPG" alt="Gallery Image 23" />
+  <img src="gallery/IMG_5264.JPG" alt="Gallery Image 24" />
+  <img src="gallery/IMG_5363.jpg" alt="Gallery Image 25" />
+  <img src="gallery/IMG_5377.JPG" alt="Gallery Image 26" />
+  <img src="gallery/IMG_2548.jpg" alt="Gallery Image 27" />
+  <img src="gallery/IMG_5588_Original.jpg" alt="Gallery Image 28" />
+  <img src="gallery/IMG_5589_Original.jpg" alt="Gallery Image 29" />
+  <img src="gallery/IMG_6994.jpg" alt="Gallery Image 30" />
+  <img src="gallery/IMG_6998.jpg" alt="Gallery Image 31" />
+  <img src="gallery/IMG_8029.jpg" alt="Gallery Image 31" />
+  <img src="gallery/IMG_8393.jpg" alt="Gallery Image 32" />
+  <img src="gallery/IMG_8486.JPG" alt="Gallery Image 33" />
+  <img src="gallery/IMG_8838.jpg" alt="Gallery Image 34" />
+  <img src="gallery/IMG_8865.jpg" alt="Gallery Image 35" />
+  <img src="gallery/IMG_9723.jpg" alt="Gallery Image 36" />
+  <img src="gallery/IMG_9895.JPG" alt="Gallery Image 37" />
+  <img src="gallery/IMG_9947.JPG" alt="Gallery Image 38" />
+</section>
 
+<!-- Full screen viewer -->
+<div class="full-viewer" id="fullViewer">
+    <span class="close-btn" id="closeViewer">&times;</span>
+    <img id="viewerImg" src="" alt="Large View" />
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-grid">
-        
-          <!-- Logo & Mission -->
-          <div class="footer-logo-mission">
-            <div class="footer-logo">
-            <a href="#">
-                <img src="images/logo-inverted.png" alt="Raising Queens Logo" class="footer-logo-img">
-            </a>
-            </div>
-            <p>
-              Empowering women through community support, education, and opportunities for growth. 
-              Together, we rise and help others rise too.
-            </p>
-        
-            <!-- Social Media -->
-            <div class="social-links">
-              <a href="https://www.facebook.com/share/19NDCD3vNG/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://wa.me/27814076516" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.instagram.com/raisingqueensfoundation?igsh=a2NqazM0MjQzdDEy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.tiktok.com/@raisingqueensfoundation?_t=ZM-8zMhEOe7ubQ&_r=1" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
-              <a href="https://www.linkedin.com/company/raisingqueensfoundation/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        
-
-          <!-- Quick Links -->
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <nav>
-              <a href="index.html">Home</a>
-              <a href="Events.html">Events</a>
-              <a href="Gallery.html">Gallery</a>
-              <a href="Donate.html">Donate</a>
-            </nav>
-          </div>
-
-
-          <!-- Contact Info -->
-          <div class="footer-contact">
-            <h4>Contact Us</h4>
-            <div class="contact-item">
-              <i class="fa-solid fa-map-marker-alt icon"></i>
-              <span>Johannesburg<br>Gauteng</span>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-phone icon"></i>
-              <span>+27 (0) 81 407 6516</span>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-envelope icon"></i>
-              <span>Info@raisingqueens.org.za</span>
-            </div>
-          </div>
-        
-        </div>
-    
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-          <p>© 2025 Raising Queens. All rights reserved.</p>
-          <div class="footer-policies">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-grid">
+  
+    <!-- Logo & Mission -->
+    <div class="footer-logo-mission">
+      <div class="footer-logo">
+      <a href="#">
+          <img src="images/logo-inverted.png" alt="Raising Queens Logo" class="footer-logo-img">
+      </a>
       </div>
-    </footer>
+      <p>
+        Empowering women through community support, education, and opportunities for growth. 
+        Together, we rise and help others rise too.
+      </p>
+  
+      <!-- Social Media -->
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/19NDCD3vNG/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/27814076516" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/raisingqueensfoundation?igsh=a2NqazM0MjQzdDEy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@raisingqueensfoundation?_t=ZM-8zMhEOe7ubQ&_r=1" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com/company/raisingqueensfoundation/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Events.html">Events</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Donate.html">Donate</a>
+      </nav>
+    </div>
+
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <i class="fa-solid fa-map-marker-alt icon"></i>
+        <span>30 Elizabeth Avenue, Rivonia, Sandton, South Africa</span>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-phone icon"></i>
+        <span>+27 (0) 81 407 6516</span>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope icon"></i>
+        <span>Info@raisingqueens.org.za</span>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 Raising Queens. All rights reserved.</p>
+    <div class="footer-policies">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</div>
+</footer>
 
 
 
-
-<script src="/script.js"></script>
+<script src="script_gallery.js"></script>
 </body>
 </html>
