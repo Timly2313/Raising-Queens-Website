@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Events - Raising Queens</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -45,34 +45,272 @@
         <a href="Donate.html">Donate</a>
         <button class="donate-btn">Donate</button>
     </div>
-    <header>
+    </header>
 
+    <!-- Progress Bar -->
+    <div id="progressBar"></div>
 
+    <!-- Events Hero Section -->
+    <section class="events-hero">
+        <div class="events-hero-content">
+            <h1>Our Events</h1>
+            <p>Empowering women through meaningful experiences, workshops, and community gatherings</p>
+        </div>
+    </section>
 
+    <!-- Events Filter -->
+    <section class="events-filter">
+        <div class="filter-container">
+            <h3>Filter Events</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="past">Past Events</button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Featured Event -->
+    <section class="featured-event">
+        <div class="featured-container">
+            <div class="featured-content">
+                <span class="featured-badge">Featured Event</span>
+                <h2>Annual Women's Leadership Summit 2025</h2>
+                <p>Join us for our flagship event featuring inspiring speakers, networking opportunities, and workshops designed to elevate women in leadership roles.</p>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>March 15, 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Johannesburg Convention Centre</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+                <button class="register-btn">Register Now</button>
+            </div>
+            <div class="featured-image">
+                <img src="images/featured-event.jpg" alt="Women's Leadership Summit">
+            </div>
+        </div>
+    </section>
 
+    <!-- Events Grid -->
+    <section class="events-grid">
+        <div class="events-container">
+            
+            <!-- Upcoming Events -->
+            <div class="event-card upcoming workshops" data-category="upcoming workshops">
+                <div class="event-image">
+                    <img src="images/event-1.jpg" alt="Financial Literacy Workshop">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">FEB</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category">Workshop</span>
+                    <h3>Financial Literacy for Women</h3>
+                    <p>Learn essential financial planning skills, investment strategies, and budgeting techniques to secure your financial future.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Community Center</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2:00 PM - 5:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="event-card upcoming community" data-category="upcoming community">
+                <div class="event-image">
+                    <img src="images/event-2.jpg" alt="Networking Brunch">
+                    <div class="event-date">
+                        <span class="day">28</span>
+                        <span class="month">FEB</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category">Community</span>
+                    <h3>Women in Business Networking Brunch</h3>
+                    <p>Connect with like-minded women entrepreneurs and professionals over brunch. Build meaningful relationships and expand your network.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>The Sky Lounge</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 1:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="event-card upcoming workshops" data-category="upcoming workshops">
+                <div class="event-image">
+                    <img src="images/event-3.jpg" alt="Mental Health Workshop">
+                    <div class="event-date">
+                        <span class="day">08</span>
+                        <span class="month">MAR</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category">Workshop</span>
+                    <h3>Mental Health & Wellness</h3>
+                    <p>Prioritize your mental health with practical strategies for stress management, self-care, and maintaining work-life balance.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Wellness Center</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>6:00 PM - 8:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Past Events -->
+            <div class="event-card past community" data-category="past community">
+                <div class="event-image">
+                    <img src="images/event-past-1.jpg" alt="Career Development Panel">
+                    <div class="event-date past-date">
+                        <span class="day">15</span>
+                        <span class="month">JAN</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category past-category">Past Event</span>
+                    <h3>Career Development Panel Discussion</h3>
+                    <p>Industry leaders shared insights on career advancement, overcoming workplace challenges, and building professional confidence.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Business Hub</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>85 Attendees</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">View Highlights</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="event-card past workshops" data-category="past workshops">
+                <div class="event-image">
+                    <img src="images/event-past-2.jpg" alt="Digital Skills Workshop">
+                    <div class="event-date past-date">
+                        <span class="day">28</span>
+                        <span class="month">DEC</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category past-category">Past Event</span>
+                    <h3>Digital Skills for Modern Women</h3>
+                    <p>Participants learned essential digital marketing, social media management, and e-commerce skills to grow their businesses online.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tech Campus</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>62 Attendees</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">View Highlights</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="event-card past community" data-category="past community">
+                <div class="event-image">
+                    <img src="images/event-past-3.jpg" alt="Holiday Charity Drive">
+                    <div class="event-date past-date">
+                        <span class="day">20</span>
+                        <span class="month">DEC</span>
+                    </div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category past-category">Past Event</span>
+                    <h3>Holiday Charity Drive & Celebration</h3>
+                    <p>Our community came together to support local families in need while celebrating the holiday season with joy and gratitude.</p>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Community Hall</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-heart"></i>
+                            <span>150 Families Helped</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-secondary">View Highlights</button>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
 
+    <!-- Event Calendar -->
+    <section class="event-calendar">
+        <div class="calendar-container">
+            <h2>Upcoming Events Calendar</h2>
+            <div class="calendar-view">
+                <div class="calendar-header">
+                    <button class="nav-btn" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">February 2025</h3>
+                    <button class="nav-btn" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Never Miss an Event</h2>
+                <p>Subscribe to our newsletter and be the first to know about upcoming workshops, community gatherings, and special events.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
     
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
@@ -141,9 +379,6 @@
         </div>
       </div>
     </footer>
-
-
-
 
 <script src="/script.js"></script>
 </body>
